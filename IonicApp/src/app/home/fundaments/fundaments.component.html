@@ -1,0 +1,28 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+  <ion-input clearInput placeholder="Nombre" [(ngModel)]="nombre" ></ion-input>
+  <ion-input clearInput placeholder="Apellidos" [(ngModel)]="apellido" ></ion-input>
+  <ion-input clearInput placeholder="Edad" type="number" [(ngModel)]="edad"  ></ion-input>  
+
+
+<ion-button expand="block" (click)="crearEstudiante()" >Agregar Estudiante</ion-button>
+
+<ion-list>
+  <ion-item *ngFor="let estudiante of estudiantes">
+    <ion-label>
+       {{estudiante.nombre}}
+       {{estudiante.apellidos}} - {{estudiante.edad}}
+    </ion-label> 
+  </ion-item>
+</ion-list>
+
+
+  </div>
+</ion-content>
