@@ -1,3 +1,7 @@
+import { RestaurantsService } from './restaurants/restaurants.service';
+import { FundamentsComponent } from './fundaments/fundaments.component';
+import { AboutComponent } from './about/about.component';
+import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
@@ -14,6 +18,11 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  declarations: [
+    HomePage,    
+    AboutComponent,
+    FundamentsComponent
+  ],
+  providers:[RestaurantsService]
 })
 export class HomePageModule {}

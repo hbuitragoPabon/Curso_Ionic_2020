@@ -17,7 +17,12 @@ const routes: Routes = [
     children:[
       {
         path:"restaurants",
-        component: RestaurantsComponent
+        children:[
+          {
+            path:'',
+            loadChildren: () => import('./restaurants/restaurants.module').then((m)=> m.RestaurantsModule)
+          }
+        ]
       },
       {
         path:"fundaments",
